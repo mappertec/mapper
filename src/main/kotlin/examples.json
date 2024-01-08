@@ -1,0 +1,80 @@
+{
+  "people": [
+    {
+      "name": "Personal Banking Customer",
+      "description": "A customer of the bank, with personal bank accounts."
+    }
+  ],
+  "systems": [
+    {
+      "name": "Internet Banking System",
+      "description": "Allows customers to view information about their bank accounts and make payments."
+    },
+    {
+      "name": "E-mail System",
+      "description": "The internal Microsoft Exchange e-mail system."
+    },
+    {
+      "name": "Mainframe Banking System",
+      "description": "Stores all of the core banking information about customers, accounts, transactions, etc."
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Sends emails to",
+      "description": "Sends emails to",
+      "from": "E-mail System",
+      "to": "Personal Banking Customer"
+    },
+    {
+      "name": "View balances and make payments",
+      "description": "Views account balances, and makes payments using",
+      "from": "Personal Banking Customer",
+      "to": "Personal Banking Customer"
+    },
+    {
+      "name": "Get account information and make payments",
+      "description": "Gets account information from, and makes payments using",
+      "from": "Internet Banking System",
+      "to": "Mainframe Banking System"
+    },
+    {
+      "name": "Sends email using",
+      "description": "Sends email using",
+      "from": "Internet Banking System",
+      "to": "Email System"
+    }
+  ],
+  "containers": [
+    {
+      "name": "Web Application",
+      "technology": "Java and Spring MVC",
+      "description": "Delivers the static content and the Internet banking single page application.",
+      "systems": ["Internet Banking System"]
+    },
+    {
+      "name": "Single-Page Application",
+      "technology": "JavaScript and Angular",
+      "description": "Provides all of the Internet banking functionality to customers via their web browser.",
+      "systems": ["Internet Banking System"]
+    },
+    {
+      "name": "Mobile App",
+      "technology": "Xamarin",
+      "description": "Provides a limited subset of the Internet banking functionality to customers via their mobile device.",
+      "systems": ["Internet Banking System"]
+    },
+    {
+      "name": "API Application",
+      "technology": "Java and Spring MVC",
+      "description": "Provides Internet banking functionality via a JSON/HTTPS API.",
+      "systems": ["Internet Banking System"]
+    },
+    {
+      "name": "Database",
+      "technology": "Oracle Database Schema",
+      "description": "Stores user registration information, hashed authentication credentials, access logs, etc.",
+      "systems": ["Internet Banking System"]
+    }
+  ]
+}
