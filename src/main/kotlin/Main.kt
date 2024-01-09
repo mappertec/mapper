@@ -6,7 +6,7 @@ class System1 {
     val containers = listOf(Container())
 
     override fun toString(): String {
-        return "str rep"
+        return "str representation"
     }
 }
 
