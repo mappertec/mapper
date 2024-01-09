@@ -4,20 +4,20 @@ plugins {
 }
 
 group = "dev.mapper"
-version = "v0.4.0"
+version = "v0.5.0"
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    //implementation("com.google.code.gson:gson:2.10.1")
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-}
+//dependencies {
+//    //implementation("com.google.code.gson:gson:2.10.1")
+//    testImplementation("org.jetbrains.kotlin:kotlin-test")
+//}
 
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(8)
-}
+//tasks.test {
+//    useJUnitPlatform()
+//}
+//kotlin {
+//    jvmToolchain(8)
+//}
