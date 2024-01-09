@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "dev.mapper"
-version = "1.0-SNAPSHOT"
+version = "v0.3.0"
 
 repositories {
     mavenCentral()
