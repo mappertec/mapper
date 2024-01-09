@@ -1,8 +1,9 @@
 plugins {
     kotlin("jvm") version "1.9.21"
+    `maven-publish`
 }
 
-group = "dev.mapper"
+group = "com.github.mappertec"
 version = "1.0-SNAPSHOT"
 
 repositories {
