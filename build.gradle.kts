@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.mappertec"
+group = "dev.mapper"
 version = "1.0-SNAPSHOT"
 
 repositories {
