@@ -54,3 +54,7 @@ tasks {
         }
     }
 }
+
+kotlin {
+    jvmToolchain(8)
+}
