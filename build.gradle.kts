@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "dev.mapper"
-version = "1.3"
+//version = "1.3"
 
 repositories {
     mavenCentral()
