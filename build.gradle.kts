@@ -31,23 +31,23 @@ java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 
-tasks.shadowJar {
-    minimize()
-    configurations = listOf(project.configurations.shadow.get())
-    val folder = System.getenv("pluginFolder_1-20")
-    if (folder != null) destinationDirectory.set(file(folder))
-    archiveFileName.set("${project.name}-${project.version}.jar")
-}
-
-// Handles version variables
-tasks.processResources {
-    expand(project.properties)
-
-    inputs.property("version", rootProject.version)
-    filesMatching("plugin.yml") {
-        expand("version" to rootProject.version)
-    }
-}
+//tasks.shadowJar {
+//    minimize()
+//    configurations = listOf(project.configurations.shadow.get())
+//    val folder = System.getenv("pluginFolder_1-20")
+//    if (folder != null) destinationDirectory.set(file(folder))
+//    archiveFileName.set("${project.name}-${project.version}.jar")
+//}
+//
+//// Handles version variables
+//tasks.processResources {
+//    expand(project.properties)
+//
+//    inputs.property("version", rootProject.version)
+//    filesMatching("plugin.yml") {
+//        expand("version" to rootProject.version)
+//    }
+//}
 
 kotlin {
     jvmToolchain(8)
